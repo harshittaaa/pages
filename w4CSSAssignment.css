@@ -1,0 +1,60 @@
+body{
+	background-image: url('https://images.unsplash.com/photo-1483406354872-3e1be6d48c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80');
+	background-repeat: no-repeat;
+	background-size: cover;
+}  
+.nav{
+	float: left;
+	margin: 5px;
+	height: 1400px;
+	width: 300px;
+	margin-bottom: 7px;
+
+} 
+.imagee, .buildings, .lasvegas, .lvstrip{
+	width:200px;
+	height:200px;     
+	float: right;
+	margin: 3px;
+	
+} 
+  
+.para3, .para4{
+	clear: right;
+}
+h1{
+	font: 50px bolder serif;
+	color: #F4D03F ;
+}
+
+h2{
+	clear:right;
+	font-size: 25px;
+	color:#82E0AA;
+}
+
+.para1, .para2, .para3, .para4{
+	font: 14px sans-serif;
+	color:#d27cd8;
+	font-weight: bolder;
+	}
+
+table{
+	clear: right;
+	font-size: 14px;
+	margin:10px;
+}
+
+#tablehead{
+	clear:right;
+	font-size: 17px;
+	color:#2E86C1;
+}
+
+.left{
+color:#F4D03F;
+}
+
+.right{
+	color:#E9967A;
+}
