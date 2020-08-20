@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Feedback form
+        </title>
+        <link rel="stylesheet" type="text/css" href="html_Form2.css">
+        <script type="text/javascript" src="html_Form2.js"></script>
+    </head>
+    <body>
+        <header id="head">
+            <h1>FEEDBACK FORM</h1>
+            <h3> Help us to improve our service and customer satisfaction. </h3>
+        </header>
+        <form id="personal">
+            <fieldset>
+                <legend>Enter your personal info</legend>
+                <img class="image" src="https://image.shutterstock.com/image-vector/we-want-your-feedback-survey-260nw-1323212687.jpg">
+                <div id="msg"> </div>
+                <table class="intro">
+                    <tr>
+                        <td>
+                            <label>FirstName:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="fname" id="fname" onblur="fvalidate()" required>
+                        </td>
+                        <td>
+                            <label>LastName:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="lname" id="lname" onblur="fvalidate()" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email Id:</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" name="mail" id="mail" onblur="fvalidate()" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Contact:</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" name="phone" id="phone" onblur="fvalidate()" pattern="\d{10}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Gender:</label>
+                        </td>
+                        <td class="gender" colspan="3">
+                            <input type="radio"name="gender" value="male" checked>Male<input type="radio" name="gender" value="female">Female<input type="radio" name="gender" value="other"> Other
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Age:</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="number" name="age" id="age" onblur="fvalidate()" required>
+                        </td>
+                    </tr>
+                   <!-- <tr>
+                        <td colspan="4" id="start">
+                            <button type="button" name=""><span class="stext">Start Survey</span></button>
+
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td>
+                            <label>Today's Date:</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="date" name="date">
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Please tick if you've visited our website for the first time: </label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="check">
+                        </td>
+                    </tr>
+
+                </table>
+                
+                <!--label>FirstName:</label> <input type="text" name="fname" id="fname">
+                <label>LastName: </label> <input type="text" name="lname" id="lname"><br>
+                <label>Email Id: </label> <input type="text" name="mail" id="mail"><br>
+                <label>Contact:  </label> <input type="text" name="phone" id="phone"><br>
+                <label>Gender:</label><br>
+                <input type="radio">Male <input type="radio">Female <input type="radio"> Other<br>
+                <br><button type="button" name="menu"> Start Survey</button>-->
+               
+                <!-- <label>Any query:</label><textarea></textarea>-->
+                  
+            </fieldset>
+
+        </form>
+        <div id="main">
+            <ol type="1">
+                <li>
+                    Overall satisfaction with your visit?
+                </li>
+                <input type="radio" name="satisfaction"> Poor<input type="radio" name="satisfaction">Good<input type="radio" name="satisfaction">Excellent
+            <li>
+                How much our product helped you to accomplish your goal?
+            </li>
+            <input type="radio" name="help"> Poor<input type="radio" name="help">Good<input type="radio" name="help">Excellent
+            <li>
+                Will you be returning to us?
+            </li>
+            <input type="radio" name="return">Uncertain<input type="radio" name="return">No<input type="radio" name="return">Yes
+            <li>
+                Would you recommend us to others?
+            </li>
+            <input type="radio" name="recommend">Uncertain<input type="radio" name="recommend">No<input type="radio" name="recommend">Yes
+            </ol>
+            How can we improve? Please leave your comments or suggestions(if any) below:
+            <br><textarea></textarea>
+        
+            <br><button type="submit" name="feedback">Submit feedback </button>
+        </div>
+    </body>
+</html>
+    

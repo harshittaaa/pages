@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Registration Form
+</title>
+<style>
+    #regform{
+        margin:center;
+        font-size:25px;
+    }
+    #top{
+        font-size:28px;
+    }
+    #summary{
+        font: 25px bold sans-serif;
+        color:chocolate;
+    }
+</style>
+</head>
+<body>
+    <header id="top">
+        <center>Register for getting enrolled for the courses:</center>
+    </header>
+    <span class="formbody">
+        <form id="regform">
+            fields with * are required<br>
+            FirstName*:<br>
+            <input type="text" id="entry_fname" name="fname" onblur=test1() required> <span id="fname"></span><br>
+            LastName*:<br>
+            <input type="text" id="entry_lname" name="lname"> <span id="lname"></span><br>
+            Email Id*:<br>
+            <input type="text" id="entry_mail" name="mailid" onblur=test2() required> <span id="mail"></span><br>
+            Create Password*:<br>
+            <input type="password" id="entry_pwd1" name="password" placeholder="" required> <span id="pwd1"></span><br>
+            Confirm Password*:<br>
+            <input type="password" id="entry_pwd2" name="cpassword" onblur=test3() required> <span id="pwd2"></span><br>
+            Date Of birth:<br>
+            <input type="date" id="entry_dob" name="date" title="dd-mm-yyyy" required> <span id="dob"></span><br>
+            Phone No.(Optional):<br>
+            <input type="text" id="entry_phoneno" name="phonenumber" pattern="\d{10}" title="10 digit phone no."> <span id="phoneno"></span><br>
+            <button type="enroll" name="enrollc" value="Enroll">Enroll</button>
+            <div id="summary"></div>
+        </form>
+    </span>
+        <script>
+
+        var fname=document.getElementById('entry_fname').value;
+        var lname=document.getElementById('entry_lname').value;
+        var mailid=document.getElementById('entry_mail').value;
+        var pwd1=document.getElementById('entry_pwd1').value;
+        var pwd2=document.getElementById('entry_pwd2').value;
+        var dob=document.getElementById('entry_dob').value;
+        var phoneno= document.getElementById('entry_phoneno').value;
+
+        function test1(){
+            var fname=document.getElementById('entry_fname').value;
+
+            if(fname.length<3){                
+            var msg = document.getElementById('fname');
+            msg.style.color="red";
+            msg.innerHTML="First name must be atleast 3 characters";
+            }
+
+            else {
+            var msg = document.getElementById('fname');
+            msg.style.color="green";
+            msg.innerHTML="Input Accepted";
+            }
+        }
+
+        function test2()
+        {
+            var mailid=document.getElementById('entry_mail').value;
+
+            if(mailid.length<9){
+            document.getElementById('mail').style.color="red";
+            document.getElementById('mail').innerHTML="Invalid";
+            }
+            else{
+            document.getElementById('mail').style.color="green";
+            document.getElementById('mail').innerHTML="Input Accepted";
+            }
+        }
+
+        function test3(){
+            var pwd1=document.getElementById('entry_pwd1').value;
+            var pwd2=document.getElementById('entry_pwd2').value;
+
+            if(pwd1==pwd2){
+                document.getElementById('pwd2').style.color="green";
+                document.getElementById('pwd2').innerHTML="Accepted";
+            }
+            else{
+                document.getElementById('pwd2').style.color="red";
+                document.getElementById('pwd2').innerHTML="Invalid, input password again";
+            }
+        }
+        function enrollcourse(e){
+            e.preventDefault();
+            console.log(3);
+            var fname = document.getElementById('entry_fname').value;
+            var msg = document.getElementById('summary');
+            msg.innerHTML = fname  + "! You are successfully enrolled for the course. Good luck!";
+        }
+        
+        document.getElementById('regform').addEventListener('enroll',enrollcourse,false);
+
+
+            </script>
+    
+</body>
+</html>
